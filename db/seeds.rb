@@ -2,7 +2,7 @@ puts "🌱 Seeding data..."
 # Seed the database here
 
 puts "Seeding users..."
-Users.create([
+User.create([
   {
     username: "taka-2628",
     profile_image: "https://avatars.githubusercontent.com/u/77429137?v=4",
@@ -21,7 +21,7 @@ Users.create([
 ])
 
 puts "Seeding projects..."
-Projects.create([
+Project.create([
   { 
     user_id: 1,
     title: "CAPE TOWN BABOON INTERACTIVE",
@@ -43,7 +43,7 @@ Projects.create([
 ])
 
 puts "Seeding comments..."
-Comments.create([
+Comment.create([
   {
     user_id: 2,
     project_id: 1,
@@ -62,7 +62,7 @@ Comments.create([
 ])
 
 puts "Seeding genres..."
-Genres.create([
+Genre.create([
   {genre: "virtual art"},
   {genre: "computer graphics"},
   {genre: "computer animation"},
@@ -77,7 +77,7 @@ Genres.create([
 ])
 
 puts "Seeding technologies..."
-Technologies.create([
+Technology.create([
   {technology: "Python", category: "language"},
   {technology: "JavaScript", category: "language"},
   {technology: "Ruby", category: "language"},
@@ -103,6 +103,7 @@ Technologies.create([
   {technology: "Nodebox", category: "library/framework"},
   {technology: "Cinder", category: "library/framework"},
   {technology: "openFrameworks", category: "library/framework"},
+  {technology: "Mapbox", category: "library/framework"},
   {technology: "Blender", category: "app software"},
   {technology: "ZBrush", category: "app software"},
   {technology: "Unity", category: "app software"},
@@ -138,5 +139,62 @@ Technologies.create([
   {technology: "Kasa Smart Devices", category: "hardware"},
   {technology: "Oculus", category: "hardware"},
 ])
+
+puts "Seeding project-genres..."
+ProjectGenre.create([
+  {
+    project_id: 1,
+    genre_id: 3
+  },
+  {
+    project_id: 1,
+    genre_id: 5
+  },
+  {
+    project_id: 1,
+    genre_id: 7
+  },
+  {
+    project_id: 2,
+    genre_id: 5
+  },
+  {
+    project_id: 2,
+    genre_id: 7
+  }
+])
+
+puts "Seeding project-technologies..."
+ProjectTechnology.create([
+  {
+    project_id: 1,
+    technology_id: 2
+  },
+  {
+    project_id: 1,
+    technology_id: 11
+  },
+  {
+    project_id: 1,
+    technology_id: 27
+  },
+  {
+    project_id: 1,
+    technology_id: 40
+  },
+  {
+    project_id: 2,
+    technology_id: 1
+  },
+  {
+    project_id: 2,
+    technology_id: 2
+  },
+  {
+    project_id: 2,
+    technology_id: 26
+  }
+])
+
 
 puts "✅ Done seeding!"
