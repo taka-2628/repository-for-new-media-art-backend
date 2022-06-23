@@ -1,3 +1,5 @@
 class Technology < ActiveRecord::Base
-  belongs_to :project
+  has_many :project_technologies
+
+  has_many :projects, through: :project_technologies
 end 
