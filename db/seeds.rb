@@ -34,7 +34,7 @@ Project.create([
   {
     user_id: 1,
     title: "AMERICAN PETROLEUMSCAPE",
-    subtitle: "Interactive Archive of Satelite Images of 155 Oil Refineries in America"
+    subtitle: "Interactive Archive of Satelite Images of 155 Oil Refineries in America",
     description: "AMERICAN PETROLEUMSCAPE is developed as a part of a design/research project, which investigates the environmental and health issues around oil refineries. The archive contains satellite images of all of 155 oil refineries in the United States.",
     image: "https://takashi-honzawa.com/static/media/04-American-Petroleumscape.78f47302ef90df4d5ac5.gif",
     url: "https://taka-2628.github.io/coding-for-spatial-practices/project-03/",
