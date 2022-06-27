@@ -1,19 +1,18 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
 
-  # GET PROJECTS
+  # PROJECTS
   get "/projects" do 
     projects = Project.all
     projects.to_json(include: [:user, {comments: {include: :user}}, :genres, :technologies])
   end
 
-  # GET USERS
+  # USERS
   get "/users" do
     users = User.all
     users.to_json(include: [:comments])
   end
 
-  # POST USERS
   post "/users" do
     user = User.create(
       username: params[:username],
@@ -23,7 +22,7 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
-  # POST COMMENTS
+  # COMMENTS
   post "/comments" do 
     comment = Comment.create(
       user_id: params[:user_id],
@@ -33,20 +32,26 @@ class ApplicationController < Sinatra::Base
     comment.to_json
   end
 
-  # DELETE COMMENTS
+  patch "/commennts/:id" do
+    comment = Comment.find(params[:id])
+    comment.update(
+      body: params[:body]
+    )
+  end
+
   delete "/comments/:id" do 
     comment = Comment.find(params[:id])
     comment.destroy
     comment.to_json
   end
 
-  # GET GENRES
+  # GENRES
   get "/genres" do
     genres = Genre.all
     genres.to_json
   end
 
-  # GET TECHNOLOGIES
+  # TECHNOLOGIES
   get "/technologies" do
     technologies = Technology.all
     technologies.to_json
