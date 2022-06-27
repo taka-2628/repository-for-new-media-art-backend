@@ -23,6 +23,23 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
+  # POST COMMENTS
+  post "/comments" do 
+    comment = Comment.create(
+      user_id: params[:user_id],
+      project_id: params[:project_id],
+      body: params[:body]
+    )
+    comment.to_json
+  end
+
+  # DELETE COMMENTS
+  delete "/comments/:id" do 
+    comment = Comment.find(params[:id])
+    comment.destroy
+    comment.to_json
+  end
+
   # GET GENRES
   get "/genres" do
     genres = Genre.all
