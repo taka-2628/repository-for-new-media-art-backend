@@ -57,7 +57,7 @@ Comment.create([
   {
     user_id: 2,
     project_id: 1,
-    body: "Thanks taka-2628, I'll git it a try."
+    body: "Thanks taka-2628, I'll give it a try."
   }
 ])
 
