@@ -39,6 +39,24 @@ Project.create([
     image: "https://takashi-honzawa.com/static/media/04-American-Petroleumscape.78f47302ef90df4d5ac5.gif",
     url: "https://taka-2628.github.io/coding-for-spatial-practices/project-03/",
     github_url: "https://github.com/taka-2628/coding-for-spatial-practices/project-03/"
+  },
+  {
+    user_id: 3,
+    title: "BAMBOO FUTURISM",
+    subtitle: "Twinmotion Animation of New Building Typology for Jamaica",
+    description: "Bamboo Futurism envisions a sustainable future of Jamaica where culms of baboo are used as the main construction material. Bamboo’s structural durability, incredible speed of growth, and maleability makes it an ideal material to replace the concrete and steel constructions that we see in Jamaica today.",
+    image: "https://takashi-honzawa.com/static/media/a-V-01.3c1011c97e1052d37dfc.gif",
+    url: "https://www.arch.columbia.edu/student-work/10323",
+    github_url: ""
+  },
+  {
+    user_id: 2,
+    title: "LIFE AND DEATH OF 52,711 ACTORS",
+    subtitle: "Data Visualization with D3.js and Mapbox API",
+    description: "Data Visualization project that explores the correlation between the main genre of an actor and his or her maridge, divorce and cause of death. Are romance actors happily married? Do actors of the same genre die of the same cause?",
+    image: "https://takashi-honzawa.com/static/media/02-52711-Actors.3c02d7ba44ac2c4cee99.gif",
+    url: "https://taka-2628.github.io/52711_ACTORS/",
+    github_url: "https://github.com/taka-2628/52711_ACTORS/"
   }
 ])
 
@@ -52,7 +70,7 @@ Comment.create([
   {
     user_id: 1,
     project_id: 1,
-    body: "Hi th, you can exmport the 3d file as glTF (GL Transmission Format). Three.js has GLTFLoader, which you can use to import your model from Blender. Hope this helps"
+    body: "Hi th, you can export the 3d file as glTF (GL Transmission Format). Three.js has GLTFLoader, which you can use to import your model from Blender. Hope this helps!"
   },
   {
     user_id: 2,
