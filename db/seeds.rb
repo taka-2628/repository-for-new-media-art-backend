@@ -101,7 +101,7 @@ Comment.create([
     user_id: 1,
     project_id: 2,
     body: "👍"
-  },
+  }
 ])
 
 puts "Seeding genres..."

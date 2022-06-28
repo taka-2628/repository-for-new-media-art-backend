@@ -10,50 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_23_161022) do
-
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
-    t.string "body"
-    t.datetime "created_at"
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.string "genre"
-  end
-
-  create_table "project_genres", force: :cascade do |t|
-    t.integer "project_id"
-    t.integer "genre_id"
-  end
-
-  create_table "project_technologies", force: :cascade do |t|
-    t.integer "project_id"
-    t.integer "technology_id"
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "title"
-    t.string "subtitle"
-    t.string "description"
-    t.string "image"
-    t.string "url"
-    t.string "github_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "technologies", force: :cascade do |t|
-    t.string "technology"
-    t.string "category"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "profile_image"
-    t.string "intro"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
