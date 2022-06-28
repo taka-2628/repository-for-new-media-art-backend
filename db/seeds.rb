@@ -76,7 +76,32 @@ Comment.create([
     user_id: 2,
     project_id: 1,
     body: "Thanks taka-2628, I'll give it a try."
-  }
+  },
+  {
+    user_id: 1,
+    project_id: 1,
+    body: "If you are working with GitHub pages to host your project, it will be a good idea to export as several glTF files to avoid exceeding 100mb file size limit."
+  },
+  {
+    user_id: 2,
+    project_id: 2,
+    body: "Hi, how do you collected the satellite images?"
+  },
+  {
+    user_id: 1,
+    project_id: 2,
+    body: "If you have coordinates of the locations, either as csv file or in JSON format, you can use Python and Google Static Map Api to automate the collection process."
+  },
+  {
+    user_id: 2,
+    project_id: 2,
+    body: "Cool, thanks for the tip!"
+  },
+  {
+    user_id: 1,
+    project_id: 2,
+    body: "👍"
+  },
 ])
 
 puts "Seeding genres..."
