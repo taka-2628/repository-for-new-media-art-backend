@@ -20,6 +20,26 @@ class ApplicationController < Sinatra::Base
     project.to_json
   end
 
+  patch "/projects/:id" do
+    project = Project.find(params[:id])
+    project.update(
+      user_id: params[:user_id],
+      title: params[:title],
+      subtitle: params[:subtitle],
+      description: params[:description],
+      image: params[:image],
+      url: params[:url],
+      github_url: params[:github_url]
+    )
+    project.to_json
+  end
+
+  delete "/projects/:id" do
+    project = Project.find(params[:id])
+    project.destroy
+    project.to_json
+  end
+
   # USERS
   get "/users" do
     users = User.all
