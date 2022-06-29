@@ -7,6 +7,19 @@ class ApplicationController < Sinatra::Base
     projects.to_json(include: [:user, {comments: {include: :user}}, :genres, :technologies])
   end
 
+  post "/projects" do 
+    project = Project.create(
+      user_id: params[:user_id],
+      title: params[:title],
+      subtitle: params[:subtitle],
+      description: params[:description],
+      image: params[:image],
+      url: params[:url],
+      github_url: params[:github_url]
+    )
+    project.to_json
+  end
+
   # USERS
   get "/users" do
     users = User.all
