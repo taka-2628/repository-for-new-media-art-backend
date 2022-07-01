@@ -17,8 +17,9 @@ Repository for New Media Art is an online repository for digital art. It is a pl
 
 ## Installation
 ### Backend
-1. Fork and clone this repository 
-2. Run bundle exec rake server
+1. Fork and clone this repository
+2. Run bundle exec rake db:migrate db:seed
+3. Run bundle exec rake server 
 ### Frontend
 1. Fork and clone [frontend repository](https://github.com/taka-2628/repository-for-new-media-art)
 2. Run npm install 

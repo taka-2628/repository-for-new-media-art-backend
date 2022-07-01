@@ -7,6 +7,11 @@ class ApplicationController < Sinatra::Base
     projects.to_json(include: [:user, {comments: {include: :user}}, :genres, :technologies])
   end
 
+  get "/projects/by_created_at" do
+    projects = Project.all.order(:created_at)
+    projects.to_json(only: [:id, :user_id, :title, :subtitle, :image])
+  end
+
   post "/projects" do 
     project = Project.create(
       user_id: params[:user_id],
